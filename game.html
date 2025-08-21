@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <p style="color: yellow;">click the button and kill the bird</p>
+    <!-- Ducks -->
+    <input type="checkbox" id="duck1">
+    <label for="duck1" class="duck"></label>
+
+    <input type="checkbox" id="duck2">
+    <label for="duck2" class="duck"></label>
+
+    <input type="checkbox" id="duck3">
+    <label for="duck3" class="duck"></label>
+
+    <input type="checkbox" id="duck4">
+    <label for="duck4" class="duck"></label>
+
+    <input type="checkbox" id="duck5">
+    <label for="duck5" class="duck"></label>
+
+    <!-- Gunshot sound -->
+    <audio id="gunshotSound" src="gunshot.mp3" preload="auto"></audio>
+
+    <!-- Score display -->
+    <div class="score">
+        <p id="scoreDisplay">Score: 0</p>
+        
+    </div>
+
+    <!-- Script at the end so DOM loads first -->
+    <script src="game.js"></script>
+</body>
+</html>

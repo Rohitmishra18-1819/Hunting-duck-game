@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+  position: relative;
+  height:95vh;
+  background: url('sky.jpg') repeat-x bottom left;
+  background-size: cover;
+}
+
+/*hide checkboxes.*/
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Common duck styles */
+.duck {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height:60px;
+  background: url('duck.webp') no-repeat center center;
+  background-size:contain;
+  display: block;
+  z-index:3;
+}
+
+/* Individual ducks with different paths and delays */
+#duck1 + label {
+  top: 5%;
+  animation: zigzag 10s linear infinite;
+}
+#duck2 + label {
+  top: 10%;
+  animation: zigzag 12s linear infinite;
+  animation-delay: 3s;
+}
+#duck3 + label {
+  top: 15%;
+  animation: zigzag 14s linear infinite;
+  animation-delay: 6s;
+}
+#duck4 + label {
+  top: 20%;
+  animation: zigzag 11s linear infinite;
+  animation-delay: 2s;
+}
+#duck5 + label {
+  top: 30%;
+  animation: zigzag 13s linear infinite;
+  animation-delay: 5s;
+}
+
+
+/* Left to right animation */
+
+@keyframes zigzag {
+    0% { left: -60px; top: 50px; }
+    20% { left: 20%; top: 150px; }
+    40% { left: 40%; top: 80px; }
+    60% { left: 60%; top: 180px; }
+    80% { left: 80%; top: 100px; }
+    100% { left: 110%; top: 140px; }
+}
+
+/* Duck disappears and rotates when "shot" (checkbox checked) */
+input:checked + label {
+  opacity: 0;
+  transition: 0.5s;
+  transform: rotate(120deg);
+  transform-origin: 60%;
+  z-index: -5;
+}
+
+/* Score area */
+.score{
+  position: absolute;
+  bottom:0;
+  height:60px;
+  width:110%;
+  background-color:pink;
+  color:red;
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
